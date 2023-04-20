@@ -12,7 +12,7 @@ export default function TopBar() {
         </input><i class="fa-solid fa-magnifying-glass" style={{color: "#010005",marginLeft:"10px"}}></i></div>
         <div></div>
         
-        <div><button className="topbar-signup"><i class="fa-solid fa-right-to-bracket" style={{color: "#865DFF",height:"2px",width:"2px"}}></i></button></div>
+        <div><button className="topbar-signup"><i class="fa-solid fa-right-to-bracket" style={{color: "white",height:"2px",width:"2px"}}></i></button></div>
         
 
     </div>
