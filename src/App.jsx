@@ -2,6 +2,10 @@
 import './App.css';
 import TopBar from './top';
 import BodyTop from './bodyTop';
+import MovingBanner from './movingBanner';
+import MovingProducts from './movingProducts';
+import Features from './features';
+import BottomDiv from './bottomDiv';
 
 
 function App() {
@@ -9,6 +13,10 @@ function App() {
     <div className="App">
     <TopBar />
     <BodyTop />
+    <MovingBanner />
+    <Features />
+    <MovingProducts />
+    <BottomDiv />
      
     </div>
   );

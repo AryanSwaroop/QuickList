@@ -168,4 +168,61 @@ input[type="text"], textarea {
 /****************************************Body Mid*****************************************************/
 
 
+.movingProductDiv {
+  background-color: white;
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(5, 1fr); 
+  height: 340px; 
+}
 
+.divItems {
+  background-color: white;
+  width: 70%;
+  height: 100%;
+}
+
+.featuresBox{
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(3, 1fr); 
+  background-color:black;
+  height:500px;
+  
+}
+
+.productDescription {
+  
+    font-size:2rem;
+    margin-top:20%;
+    font-family: 'Bruno Ace SC', cursive;
+
+
+
+}
+
+.ProductImage {
+  height: 300px;
+}
+/*******************************************Body Mid******************************************************/
+/********************************************Bottom Div***************************************************/
+
+.BottomDiv {
+  height: 500px;
+  width: 100%;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: black;
+  display: grid;
+}
+
+.loveMessage {
+  color: aliceblue;
+  text-align: center;
+  
+}
+
+.SubBottom {
+  margin-top: 100px;
+  color: aliceblue;
+  
+}
