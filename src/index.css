@@ -226,3 +226,69 @@ input[type="text"], textarea {
   color: aliceblue;
   
 }
+
+.socialDiv {
+  font-size:"1.5rem";
+  grid-template-columns: repeat(3, 1fr);
+  display: grid;
+
+
+}
+
+.socialsButton {
+  width: 20%;
+  
+  
+}
+/**********************************************Bottom Div******************************************************/
+
+/****Route : /signup ******/
+/**********************************************SignUP Box******************************************************/
+.SignupBox {
+  background-color: white;
+  margin-top: 8%;
+  margin-bottom: 10%;
+  height: 610px;
+  width: 100%;
+  align-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  grid-template-columns: repeat(2, 1fr);
+  display: grid;
+}
+
+.subSignup {
+  
+  border-width: 4px;
+  border: solid;
+  height: 610px ;
+
+}
+
+.formChildren {
+  width: 80%;
+
+  
+}
+
+.SubmitButton {
+  width: 80%;
+  height: 6%;
+}
+
+.signButton {
+  box-shadow: 2vw;
+  border-radius: 20px;
+  margin-top: 18%;
+  margin-right: auto;
+  margin-left: auto;
+  align-content: center;
+  height: 65px;
+  width: 50%;
+  background-color: grey;
+}
+
+.buttonText {
+  padding-top: 2.5%;
+  color : white;
+}
