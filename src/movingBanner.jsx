@@ -1,3 +1,4 @@
+import React from "react";
 export default function MovingBanner () {
     return(
         <div id="carouselExampleAutoplaying" class="carousel slide" style={{width:"100%",marginTop:"100px"}}>

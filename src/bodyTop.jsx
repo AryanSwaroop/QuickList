@@ -1,3 +1,5 @@
+import React from "react";
+
 import MovingBanner from "./movingBanner"
 export default function BodyTop (){
     return (<div>

@@ -1,8 +1,24 @@
+
+import React, {useEffect, useState }  from 'react';
+import './App.css';
+import dataHandler from './G-dataHandler';
+
+
+
+const google = ()=>{
+    window.open("http://localhost:5000/auth/google/callback","_self")
+}
+
 export default function Signup(){
+
+  const user = dataHandler().user.displayName;
+  console.log(user);
+ 
     return(
         <div>
            <div className="SignupBox">
              <div className="subSignup">
+             <div className='nameDisplay'><h1>Hello {user ? user : "User" }</h1></div>
              <div className="SignupForm">
                 <form>
                     
@@ -19,7 +35,7 @@ export default function Signup(){
              </div>
              <div className="subSignup">
              <div className="SignupForm">
-                <div className="signButton" style={{backgroundColor:"#CE5959"}}><h2 className="buttonText">Google&nbsp;<i class="fa-brands fa-google" style={{color: "#ffffff"}}></i></h2></div>
+                <div className="signButton" style={{backgroundColor:"#CE5959"}} onClick={google}><h2 className="buttonText">Google&nbsp;<i class="fa-brands fa-google" style={{color: "#ffffff"}}></i></h2></div>
                 <div className="signButton" style={{backgroundColor:"#19376D"}}><h2 className="buttonText">FaceBook&nbsp;<i class="fa-brands fa-facebook" style={{color: "#ffffff"}}></i></h2></div>
              </div>
              </div>
@@ -27,3 +43,4 @@ export default function Signup(){
         </div>
     )
 }
+

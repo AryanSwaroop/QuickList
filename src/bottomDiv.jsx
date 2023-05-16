@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function BottomDiv () {
     return(<div>
     <h3 className="loveMessage">Made With <i class="fa-solid fa-heart" style={{color: "#ff0000"}}></i> In INDIA</h3>

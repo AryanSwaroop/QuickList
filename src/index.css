@@ -49,6 +49,14 @@ code {
 
 }
 
+.profilePicture {
+  height: 50px;
+  border-radius: 30px;
+  margin-top: 9px;
+  
+
+}
+
 .navbar-search {
   
   
@@ -290,5 +298,10 @@ input[type="text"], textarea {
 
 .buttonText {
   padding-top: 2.5%;
+  color : white;
+}
+
+.nameDisplay {
+  background-color: black;
   color : white;
 }
