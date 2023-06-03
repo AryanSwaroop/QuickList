@@ -11,6 +11,10 @@ const google = ()=>{
 
 export default function Signup(){
 
+  const logout = () => {
+    window.open("http://localhost:5000/auth/logout","_self");
+  };
+
   const user = dataHandler().user.displayName;
   console.log(user);
  
@@ -37,6 +41,7 @@ export default function Signup(){
              <div className="SignupForm">
                 <div className="signButton" style={{backgroundColor:"#CE5959"}} onClick={google}><h2 className="buttonText">Google&nbsp;<i class="fa-brands fa-google" style={{color: "#ffffff"}}></i></h2></div>
                 <div className="signButton" style={{backgroundColor:"#19376D"}}><h2 className="buttonText">FaceBook&nbsp;<i class="fa-brands fa-facebook" style={{color: "#ffffff"}}></i></h2></div>
+                <div className= "signoutButton" onClick={logout}><h2>Signout</h2> </div>
              </div>
              </div>
            </div>

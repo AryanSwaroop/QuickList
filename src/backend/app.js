@@ -22,8 +22,8 @@ async function main() {
 
 const userSchema = new mongoose.Schema({
   userName: String,
-  id : String,
-  email : String
+  _id : String,
+  
 
 });
 
@@ -55,8 +55,8 @@ app.use(cors(
 function SaveData (profile){
   
     let user = new User();
-    user.userName = profile.user.displayName;
-    user.id = profile.user.id;
+    user.userName = profile.displayName;
+    user._id = profile.id;
     const doc = user.save();
 
     console.log(doc);
@@ -77,7 +77,13 @@ passport.use(new GoogleStrategy({
   function(accessToken, refreshToken, profile, done) {
     
     
-    done(null,profile)
+     SaveData(profile)
+     done(null,profile)
+  // const user = {
+  //   userName : profile.displayName,
+  //   avatar : profile.id
+ 
+  // }
 
     
 
