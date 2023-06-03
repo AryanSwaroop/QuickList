@@ -4,10 +4,12 @@ import dataHandler from './G-dataHandler';
 export default function TopBar() {
 
 
+
     
     const userPhoto = dataHandler().user;
     console.log(userPhoto);
-
+    
+   
     
     
 
@@ -25,7 +27,8 @@ export default function TopBar() {
         <div><a href="/signup"><button className="topbar-signup" ><i class="fa-solid fa-right-to-bracket" style={{color: "white",height:"2px",width:"2px"}}></i></button></a></div>
         <div></div>
         
-        <div > <img src={userPhoto && userPhoto.photos[0].value} className="profilePicture"/></div>
+        <div > <img src={userPhoto ? userPhoto.photos[0].value : null } className="profilePicture"/></div>
+        
         
         
 

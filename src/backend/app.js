@@ -8,9 +8,26 @@ const authRoute = require('./routes/auth')
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
 const cors = require('cors');
 const session = require('express-session')
+const mongoose = require('mongoose');
+const { json } = require('stream/consumers');
 
 
 
+
+main().catch(err => console.log(err));
+
+async function main() {
+  await mongoose.connect('mongodb://127.0.0.1:27017/UserDB');
+};
+
+const userSchema = new mongoose.Schema({
+  userName: String,
+  id : String,
+  email : String
+
+});
+
+const User = mongoose.model('User', userSchema);
 
 app.use(cookieSession(
     {
@@ -20,6 +37,9 @@ app.use(cookieSession(
     }
 ));
 
+
+
+
 app.use(passport.initialize());
 app.use(passport.session());
 
@@ -28,8 +48,21 @@ app.use(cors(
     origin:"http://localhost:3000",
     methods :"GET,POST,PUT,DELETE",
     credentials : true
-})
-)
+}));
+
+//const Login = mongoose.model("Login", loginSchema);
+
+function SaveData (profile){
+  
+    let user = new User();
+    user.userName = profile.user.displayName;
+    user.id = profile.user.id;
+    const doc = user.save();
+
+    console.log(doc);
+  
+}
+
 app.use(session({
    secret: 'somethingsecretgoeshere',
    resave: false,
@@ -42,16 +75,21 @@ passport.use(new GoogleStrategy({
     callbackURL: "/auth/google/callback"
   },
   function(accessToken, refreshToken, profile, done) {
+    
+    
     done(null,profile)
+
+    
+
   }
 ));
+
 
 
 
 passport.serializeUser((user,done)=>{
     done(null,user)
 })
-
 passport.deserializeUser((user,done)=>{
     done(null,user)
 })
