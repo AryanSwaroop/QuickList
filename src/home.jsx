@@ -3,14 +3,16 @@ import MovingBanner from './movingBanner';
 import MovingProducts from './movingProducts';
 import Features from './features';
 import React from "react";
+import IntroDiv from './introDiv';
 
 export default function Home(){
     return(
         <div>
         <BodyTop />
-        <MovingBanner />
-        <Features />
-        <MovingProducts />
+        <IntroDiv />
+        
+
+        
         </div>
     )
 }

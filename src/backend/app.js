@@ -10,6 +10,7 @@ const cors = require('cors');
 const session = require('express-session')
 const mongoose = require('mongoose');
 const { json } = require('stream/consumers');
+const findOrCreate = require('mongoose-findorcreate')
 
 
 
@@ -37,7 +38,7 @@ app.use(cookieSession(
     }
 ));
 
-
+userSchema.plugin(findOrCreate);
 
 
 app.use(passport.initialize());
@@ -75,9 +76,21 @@ passport.use(new GoogleStrategy({
     callbackURL: "/auth/google/callback"
   },
   function(accessToken, refreshToken, profile, done) {
-    
-    
-     SaveData(profile)
+    // User.findOrCreate({ _id : profile.id }, function (err, user) {
+    //     return done(err, user);
+    //   });
+
+      userSchema.statics.findOrCreate = function findOrCreate(profile, done){
+        var userObj = new this();
+        this.findOne({_id : profile.id},function(err,result){ 
+            if(!result){
+               SaveData(profile);
+            }else{
+                done(null,profile);
+            }
+        });
+    };
+     
      done(null,profile)
   // const user = {
   //   userName : profile.displayName,

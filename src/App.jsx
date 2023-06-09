@@ -12,6 +12,7 @@ import {
   RouterProvider,
   Routes,
 } from "react-router-dom";
+import Products from './products';
 
 
 
@@ -27,6 +28,7 @@ function App() {
     <Route index element={<Home />} />
     <Route path="/home" element={<Home />} />
     <Route path="/signup" element={<Signup />} />
+    <Route path="/products" element = {<Products />} />
     
   </Routes>
 
