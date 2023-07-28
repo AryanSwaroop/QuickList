@@ -1,10 +1,9 @@
 import React from "react";
 
-import MovingBanner from "./movingBanner"
 export default function BodyTop (){
     return (<div>
         
-        <div className="bodyTop">
+        <div className="bodyTop" style={{zIndex:"+2"}}>
         <div className="LeftBigBox" style={{height:"540px",width:"200px"}}>
         <h1 className="BodyTopText">FOR YOUNG</h1><h1 className ="BodyTopText">AND&nbsp;OLD</h1>
         </div>

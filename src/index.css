@@ -382,7 +382,6 @@ input[type="text"], textarea {
 }
 
 .productGrids {
-  grid-template-columns: repeat(5, 1fr);
-  display: grid;
+  
 
 }
