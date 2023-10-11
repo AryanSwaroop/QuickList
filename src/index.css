@@ -127,7 +127,7 @@ input[type="text"], textarea {
   grid-template-columns: repeat(3, 1fr);  
   
   margin-top: 10%;
-  height: 700px;
+  height: 7000%;
   
 }
 
@@ -253,7 +253,7 @@ input[type="text"], textarea {
 /****Route : /signup ******/
 /**********************************************SignUP Box******************************************************/
 .SignupBox {
-  background-color: white;
+  background-color: black;
   margin-top: 8%;
   margin-bottom: 10%;
   height: 610px;
@@ -261,8 +261,8 @@ input[type="text"], textarea {
   align-content: center;
   margin-right: auto;
   margin-left: auto;
-  grid-template-columns: repeat(2, 1fr);
-  display: grid;
+ 
+  
 }
 
 .subSignup {
@@ -291,7 +291,7 @@ input[type="text"], textarea {
   margin-right: auto;
   margin-left: auto;
   align-content: center;
-  height: 65px;
+  height: 12%;
   width: 50%;
   background-color: grey;
 }
@@ -307,12 +307,15 @@ input[type="text"], textarea {
 }
 
 .signoutButton {
+  margin-bottom: 25%;
   background-color: black;
-  height: 150px;
-  width: 150px;
+  height: auto;
+  margin-top: 3%;
   color : white;
-  border-radius: 100px;
-  margin-left : 40%;
+  border-radius: 1%;
+  
+  
+
 
 } 
 
@@ -381,7 +384,133 @@ input[type="text"], textarea {
   
 }
 
-.productGrids {
+/**********************************Seller side**************************************/
+
+.ListingButton {
+  color: white;
+  background-color: black;
+  padding-top: 3%;
+  height: 50%;
+  border: solid;
+  border-radius: 20px;
+  margin-top: 16%;
+  width: 100%;
+}
+
+.SellerInput {
+  border-width: 1px;
+  border-color: white;
+  border-radius: 30px;
+  border: solid;
+  background-color: white;
+  height: 700px;
+  margin: 100px auto 50px auto;
+  width: 80%;
+}
+
+.SellerInput {
+  display: flex;
+  flex-direction: row;
+  border:solid;
+  border-color: white;
+  border-width: 2px;
+  
+  
+}
+
+.innerInputL {
+  text-align: left;
+
+  width: 50%;
+  background-color: black;
+}
+
+.innerInputR {
+  
+  
+  width: 50%;
+  background-color: black;
+}
+
+.inputArea{
+  width: 100%;
+  margin: 5%;
+  color: white;
+  
+}
+
+.submitSeller{
+  margin-left: 5%;
+  height: 60px;
+  border: solid;
+  border-color: grey;
+  border-radius: 20px;
+  width: 150px;
+  margin-top: 7%;
+  font-weight: 300;
+  box-shadow: 10px;
+  
+}
+
+.SellerHeading {
+  color: white;
+  margin-left: 20%;
+  margin-top: 5%;
+  font-family: 'Bruno Ace SC', cursive;
+}
+
+.profilePictureSeller {
+  height: 80%;
+  border-radius: 30%;
+  margin-top: 9px;
+}
+
+.sellerPhotoHolder {
+  margin-top: 35%;
+  height: 30%;
+  width: 40%;
+  background-color: white;
+  margin-left: 30%;
+  padding-top: 2%;
+}
+
+.productDiv {
+  margin-top: 10%;
+  height: 50000%;
+  width: 100%;
+  background-color: black;
+  display: flex;
   
 
 }
+
+.Productpics {
+  margin:auto;
+  margin-top: 100px;
+  position: absolute;
+}
+
+.Product_Template {
+  background-color: black;
+  color: white;
+  width: 20%;
+  height: 10%;
+  border: solid;
+  border-radius: 10%;
+  border-color: white;
+  margin: 3%;
+  
+}
+
+.productDisplay {
+  width: 40%;
+  height: 20%;
+  margin-top: 10%;
+  border: solid;
+  border-color: white;
+  border-radius: 10%;
+
+}
+
+
+

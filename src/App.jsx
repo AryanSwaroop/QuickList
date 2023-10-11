@@ -13,6 +13,7 @@ import {
   Routes,
 } from "react-router-dom";
 import Products from './products';
+import ListingView from './Shopper_FrontEnd/ShopperListing';
 
 
 
@@ -29,6 +30,7 @@ function App() {
     <Route path="/home" element={<Home />} />
     <Route path="/signup" element={<Signup />} />
     <Route path="/products" element = {<Products />} />
+    <Route path="/sellerPage" element={<ListingView/>} />
     
   </Routes>
 

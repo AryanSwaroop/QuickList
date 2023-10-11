@@ -6,14 +6,15 @@ export default function dataHandler(){
     const [user,setUser] = useState(false);
     
     useEffect(()=>{
-      const getUser = ()=>{
+      const getUser = () => {
         fetch("http://localhost:5000/auth/login/success",{
           method : "GET",
-          credentials:"include",
+          credentials: "include",
           headers: {
+            "Access-Control-Allow-Origin" : "http://localhost:3000",
             Accept:"application/json",
-            "Content-Type":"application/json",
-            "Access-Control-Allow-Credentials": true,
+            'Content-Type':"application/json",
+            'Access-Control-Allow-Credentials': true
           },
         }).then(response=>{ 
           console.log(response);
@@ -29,6 +30,7 @@ export default function dataHandler(){
       };
       getUser();
     },[]);
+    
   return(
     {user}
   )

@@ -1,4 +1,6 @@
 
+
+
 require('dotenv').config();
 const cookieSession = require('cookie-session');
 const express = require('express');
@@ -11,15 +13,27 @@ const session = require('express-session')
 const mongoose = require('mongoose');
 const { json } = require('stream/consumers');
 const findOrCreate = require('mongoose-findorcreate')
+const multer = require('multer');
+const { randomInt } = require('crypto');
 
 
+app.use(express.json())
 
 
 main().catch(err => console.log(err));
 
+
+
 async function main() {
   await mongoose.connect('mongodb://127.0.0.1:27017/UserDB');
 };
+
+
+
+
+
+
+
 
 const userSchema = new mongoose.Schema({
   userName: String,
@@ -28,7 +42,21 @@ const userSchema = new mongoose.Schema({
 
 });
 
+const productSchema = new mongoose.Schema({
+    prodName: String,
+    _id : String,
+    prodListing : String,
+    prodType : String,
+    prodPhoto : String,
+    prodPhotoId : String
+
+    
+  
+  });
+
 const User = mongoose.model('User', userSchema);
+
+const Product = mongoose.model('Prod' , productSchema );
 
 app.use(cookieSession(
     {
@@ -46,12 +74,13 @@ app.use(passport.session());
 
 app.use(cors(
     {
+      
     origin:"http://localhost:3000",
     methods :"GET,POST,PUT,DELETE",
     credentials : true
 }));
 
-//const Login = mongoose.model("Login", loginSchema);
+// const Login = mongoose.model("Login", loginSchema);
 
 function SaveData (profile){
   
@@ -63,6 +92,47 @@ function SaveData (profile){
     console.log(doc);
   
 }
+
+
+
+//array pushed data from Photo
+
+var arr = [];
+
+// for parsing MongoDB data to react 
+app.get("/ProductData" , (req,res)=>{
+  Product.find()
+  .then(Prod => { 
+    res.json(Prod);
+  }).catch(err => {
+    req.json();
+  })
+})
+
+function SaveProduct (Pdata){
+  
+    
+    let product = new Product();
+    product.prodName = Pdata.ProductName;
+    product._id =  `${Date.now()}_${Pdata.ProductName}`;
+    product.prodListing = Pdata.listingDate;
+    product.prodType = Pdata.itemType;
+    
+    if (arr.length != 0 ){
+      product.prodPhotoId = arr[0];
+      arr = [];
+
+    }
+    
+    const ProdData = product.save();
+
+
+    console.log(ProdData);
+
+  
+}
+
+//userSchema.plugin(findOrCreate);
 
 app.use(session({
    secret: 'somethingsecretgoeshere',
@@ -81,7 +151,7 @@ passport.use(new GoogleStrategy({
     //   });
 
       userSchema.statics.findOrCreate = function findOrCreate(profile, done){
-        var userObj = new this();
+        //var userObj = new this();
         this.findOne({_id : profile.id},function(err,result){ 
             if(!result){
                SaveData(profile);
@@ -90,21 +160,57 @@ passport.use(new GoogleStrategy({
             }
         });
     };
-     
+    
+  
+    
      done(null,profile)
   // const user = {
   //   userName : profile.displayName,
   //   avatar : profile.id
- 
   // }
 
     
 
   }
 ));
+//saving image file using multer.
 
 
 
+
+app.use(express.urlencoded({ extended : false }));
+
+
+const storage = multer.diskStorage({
+
+    destination: (req ,file, cb) => {
+      return cb(null,"./uploads");
+    },
+    filename: (req ,file, cb) => {
+         cb(null , `${Date.now()}-${file.originalname}` );
+    } 
+
+})
+
+const upload = multer({storage});
+
+app.post('/DataUpload', (req,res)=>{
+  console.log(req.body);
+
+  SaveProduct(req.body);
+  
+})
+
+
+app.post('/upload',upload.single("file"), (req, res) => {
+        console.log(req.file.filename);
+        const image = req.file.filename;
+        arr.push(image);
+
+
+        res.redirect("/");
+
+})
 
 passport.serializeUser((user,done)=>{
     done(null,user)
