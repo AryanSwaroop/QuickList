@@ -74,16 +74,19 @@ return(
 
 
                 <button type="button" className="submitSeller" onClick={upload} > Submit Product</button>
+                <p style={{marginLeft:"5%",color:"white",marginTop:"2%"}}>All Blanks are compulsory , not filling any one could result in failed submission. **</p>
                 </form>
+
                 
             </div>
             <div className="innerInputR" >
             <div className="sellerPhotoHolder">
             <img src={userPhoto ? userPhoto.photos[0].value : null } className="profilePictureSeller"/>
+            
             </div>
             </div>
             
-
+       
        </div>
 
 

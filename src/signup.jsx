@@ -16,7 +16,7 @@ export default function Signup(){
   };
 
   const user = dataHandler().user.displayName;
-  console.log(user);
+  console.log(user + "signup");
  
     return(
              <div style={{height:"45vw"}}>

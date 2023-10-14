@@ -14,7 +14,7 @@ const mongoose = require('mongoose');
 const { json } = require('stream/consumers');
 const findOrCreate = require('mongoose-findorcreate')
 const multer = require('multer');
-const { randomInt } = require('crypto');
+
 
 
 app.use(express.json())
@@ -111,26 +111,33 @@ app.get("/ProductData" , (req,res)=>{
 
 function SaveProduct (Pdata){
   
+    if(Pdata.ProductName == null || Pdata.itemType == null){
     
-    let product = new Product();
-    product.prodName = Pdata.ProductName;
-    product._id =  `${Date.now()}_${Pdata.ProductName}`;
-    product.prodListing = Pdata.listingDate;
-    product.prodType = Pdata.itemType;
-    
-    if (arr.length != 0 ){
-      product.prodPhotoId = arr[0];
-      arr = [];
-
+     
+    } else {
+      let product = new Product();
+      product.prodName = Pdata.ProductName;
+      product._id =  `${Date.now()}_${Pdata.ProductName}`;
+      product.prodListing = Pdata.listingDate;
+      product.prodType = Pdata.itemType;
+      
+      if (arr.length != 0 ){
+        product.prodPhotoId = arr[0];
+        arr = [];
+  
+      }
+      
+      const ProdData = product.save();
+  
+  
+      console.log(ProdData);
+  
     }
-    
-    const ProdData = product.save();
-
-
-    console.log(ProdData);
-
+   
   
 }
+
+
 
 //userSchema.plugin(findOrCreate);
 

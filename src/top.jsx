@@ -14,7 +14,7 @@ export default function TopBar() {
         <div className="topbarElements">
             <a href="/"><img src="newlogo.png" className="logo" /></a>
         </div>
-        <div className="navbar-search-div"><input placeholder="search site" type="text">
+        <div className="navbar-search-div"><input className="search-input" placeholder="search site" type="text" style={{width:"20%"}}>
         
         </input><i class="fa-solid fa-magnifying-glass" style={{color: "#010005",marginLeft:"10px"}}></i></div>
         <div></div>
