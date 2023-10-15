@@ -23,8 +23,11 @@ code {
   height: 70px;
   background-color: white;
   margin-top: 0px;
+  
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  
+  align-items: center;
 
 
 }
@@ -38,6 +41,7 @@ code {
 }
 
 .navbar-search-div {
+  float: right;
   margin-top: 0%;
   
   outline: none;
@@ -49,10 +53,14 @@ code {
 
 }
 
+.search-input{
+  box-sizing: 0 content-box;
+}
+
 .profilePicture {
   height: 50px;
   border-radius: 30px;
-  margin-top: 9px;
+  
   
 
 }
@@ -61,7 +69,7 @@ code {
   
   
   height: 50%;
-  width: 100%;
+  width: 5vw;
   -moz-box-sizing: border-box;
     box-sizing: border-box;
 
@@ -75,9 +83,9 @@ input[type="text"], textarea {
   border: none;
   border-radius: 2rem;
   outline: none;
-  width: 700px;
+  width: 100%;
   height: 30px;
-  margin-top: 17px;
+ 
   padding-left: 15px;
   padding-right: 15px;
   
@@ -88,12 +96,17 @@ input[type="text"], textarea {
 }
 
 .logo {
-  margin-top: 11px;
+ 
   margin-right: 10px;
   height: 60%;
 
   width: 100px;
 
+}
+
+.signup-div {
+  width: 50%;
+  
 }
 
 .topbar-signup {
@@ -105,7 +118,7 @@ input[type="text"], textarea {
 
 
   height: 50%;
-  margin-top: 17%;
+
   background-color: black;
   
   border-radius: 50px;
@@ -216,11 +229,12 @@ input[type="text"], textarea {
 /********************************************Bottom Div***************************************************/
 
 .BottomDiv {
-  height: 500px;
+  margin-bottom: 10%;
+  height: 100%;
   width: 100%;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   background-color: black;
-  display: grid;
+  
 }
 
 .loveMessage {
@@ -245,9 +259,12 @@ input[type="text"], textarea {
 
 .socialsButton {
   width: 20%;
-  
-  
+  background-color: black;
+  height: 200%;
+  border: solid;
 }
+
+
 /**********************************************Bottom Div******************************************************/
 
 /****Route : /signup ******/
@@ -393,16 +410,17 @@ input[type="text"], textarea {
   height: 50%;
   border: solid;
   border-radius: 20px;
-  margin-top: 16%;
+ 
   width: 100%;
 }
 
 .SellerInput {
+  align-items: left;
   border-width: 1px;
   border-color: white;
   border-radius: 30px;
   border: solid;
-  background-color: white;
+  background-color: black;
   height: 700px;
   margin: 100px auto 50px auto;
   width: 80%;
@@ -519,6 +537,15 @@ input[type="text"], textarea {
   border-color: white;
   border-radius: 10%;
 
+}
+
+.signoutButtonText {
+  margin-top: 30px;
+  padding-top:40px;
+}
+
+.signinoutDiv {
+ height: 45vw;
 }
 
 

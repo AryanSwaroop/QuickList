@@ -19,10 +19,10 @@ export default function Signup(){
   console.log(user + "signup");
  
     return(
-             <div style={{height:"45vw"}}>
+             <div className='signinoutDiv'>
                 <div className="signButton" style={{backgroundColor:"#CE5959"}} onClick={google}><h2 className="buttonText">Google&nbsp;<i class="fa-brands fa-google" style={{color: "#ffffff"}}></i></h2></div>
          
-                <div className= "signoutButton" onClick={logout}><a><h2 style={{marginTop : "30px",paddingTop:"40px"}}>Signout&nbsp;<i class="fa-solid fa-key" style={{color: "#ffffff"}}></i></h2> </a> </div>
+                <div className= "signoutButton" onClick={logout}><a><h2 className='signoutButtonText'>Signout&nbsp;<i class="fa-solid fa-key" style={{color: "#ffffff"}}></i></h2> </a> </div>
              </div>
            
         

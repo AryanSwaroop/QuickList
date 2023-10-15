@@ -79,12 +79,7 @@ return(
 
                 
             </div>
-            <div className="innerInputR" >
-            <div className="sellerPhotoHolder">
-            <img src={userPhoto ? userPhoto.photos[0].value : null } className="profilePictureSeller"/>
             
-            </div>
-            </div>
             
        
        </div>

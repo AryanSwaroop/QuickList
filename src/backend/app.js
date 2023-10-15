@@ -124,7 +124,6 @@ function SaveProduct (Pdata){
       if (arr.length != 0 ){
         product.prodPhotoId = arr[0];
         arr = [];
-  
       }
       
       const ProdData = product.save();
