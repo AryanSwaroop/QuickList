@@ -105,7 +105,7 @@ app.get("/ProductData" , (req,res)=>{
   .then(Prod => { 
     res.json(Prod);
   }).catch(err => {
-    req.json();
+    res.json();
   })
 })
 

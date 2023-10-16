@@ -27,14 +27,14 @@ router.get("/login/success", (req,res)=>{
 
 router.get("/logout", (req,res)=>{
     req.logout();
-    res.redirect("https://port-folio-teal.vercel.app/");
+    res.redirect("http://localhost:3000/");
 });
 
 //router.get("/google/callback", passport.authenticate("google",{}));
 
 router.get("/google/callback", passport.authenticate("google",{
     scope:["profile"],
-    successRedirect:"https://port-folio-teal.vercel.app/",
+    successRedirect:"http://localhost:3000/",
     failureRedirect:"/login/failed"
 }));
 
