@@ -7,7 +7,7 @@ export default function dataHandler(){
     
     useEffect(()=>{
       const getUser = () => {
-        fetch("https://backend-portfolio-aryan.vercel.app/auth/login/success",{
+        fetch("https://backend-portfolio-coral-eight.vercel.app/auth/login/success",{
           method : "GET",
           credentials: "include",
           headers: {
