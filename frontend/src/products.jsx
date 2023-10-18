@@ -9,7 +9,7 @@ import { stringify } from "querystring";
 export default function Products () {
     const [product , setProduct] = useState([]);
     useEffect(() => {
-        axios.get("http://localhost:5000/ProductData")
+        axios.get("https://backend-portfolio-aryan.vercel.app/ProductData")
         .then(Prod => {setProduct(Prod.data);})
         .catch(err => {console.log(err)})
     },[])

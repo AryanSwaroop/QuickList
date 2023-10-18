@@ -76,7 +76,7 @@ app.use(passport.session());
 app.use(cors(
     {
       
-    origin:"http://localhost:3000",
+    origin:"https://frontend-portfolio-aryan.vercel.app/",
     methods :"GET,POST,PUT,DELETE",
     credentials : true
 }));
@@ -228,6 +228,6 @@ passport.deserializeUser((user,done)=>{
 
 app.use("/auth", authRoute);
 
-app.listen(5000,()=>{
+app.listen('https://backend-portfolio-aryan.vercel.app/',()=>{
     console.log("Server Running at port 5000");
 })

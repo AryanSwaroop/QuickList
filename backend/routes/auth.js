@@ -27,14 +27,14 @@ router.get("/login/success", (req,res)=>{
 
 router.get("/logout", (req,res)=>{
     req.logout();
-    res.redirect("http://localhost:3000/");
+    res.redirect("https://frontend-portfolio-aryan.vercel.app/");
 });
 
 //router.get("/google/callback", passport.authenticate("google",{}));
 
 router.get("/google/callback", passport.authenticate("google",{
     scope:["profile"],
-    successRedirect:"http://localhost:3000/",
+    successRedirect:"https://frontend-portfolio-aryan.vercel.app/",
     failureRedirect:"/login/failed"
 }));
 
