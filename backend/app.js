@@ -25,7 +25,8 @@ main().catch(err => console.log(err));
 
 
 async function main() {
-  await mongoose.connect('mongodb://127.0.0.1:27017/UserDB');
+  await mongoose.connect('mongodb+srv://aryan-admin:'+process.env.Pass+'@cluster0.7tgucgm.mongodb.net/?retryWrites=true&w=majority');
+
 };
 
 
