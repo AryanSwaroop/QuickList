@@ -6,13 +6,13 @@ import dataHandler from './G-dataHandler';
 
 
 const google = ()=>{
-    window.open("https://backend-portfolio-coral-eight.vercel.app/auth/google/callback","_self")
+    window.open("http://localhost:5000/auth/google/callback","_self")
 }
 
 export default function Signup(){
 
   const logout = () => {
-    window.open("https://backend-portfolio-coral-eight.vercel.app/auth/logout","_self");
+    window.open("http://localhost:5000/auth/logout","_self");
   };
 
   const user = dataHandler().user.displayName;

@@ -23,7 +23,7 @@ export default function ListingView(){
     
     const upload = (e) => {
         e.preventDefault();
-        axios.post('https://backend-portfolio-coral-eight.vercel.app/DataUpload' , Data)
+        axios.post('http://localhost:5000/DataUpload' , Data)
         .then(res => {})
         .catch(er => console.log(er))
     }
@@ -33,7 +33,7 @@ export default function ListingView(){
         
         const formData = new FormData();
         formData.append('file' , file)
-        axios.post('https://backend-portfolio-coral-eight.vercel.app/upload', formData)
+        axios.post('http://localhost:5000/upload', formData)
         .then(res => {})
         .catch(er => console.log(er))
 
