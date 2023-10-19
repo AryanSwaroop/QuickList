@@ -29,14 +29,9 @@ async function main() {
 
 };
 
-
-
-app.get("https://backend-portfolio-coral-eight.vercel.app/",(req,res)=>{
+app.get("https://backend-portfolio-coral-eight.vercel.app",(req,res)=>{
   res.send("Hello I am up!")
 })
-
-
-
 
 const userSchema = new mongoose.Schema({
   userName: String,
@@ -227,6 +222,7 @@ passport.serializeUser((user,done)=>{
 passport.deserializeUser((user,done)=>{
     done(null,user)
 })
+
 
 app.use("/auth", authRoute);
 
