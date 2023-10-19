@@ -29,9 +29,9 @@ async function main() {
 
 };
 
-app.get("https://backend-portfolio-coral-eight.vercel.app/",(req,res)=>{
-  res.send("Hello I am up!")
-})
+// app.get("https://backend-portfolio-coral-eight.vercel.app/",(req,res)=>{
+//   res.send("Hello I am up!")
+// })
 
 const userSchema = new mongoose.Schema({
   userName: String,
