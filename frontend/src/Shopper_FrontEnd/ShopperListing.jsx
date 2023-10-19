@@ -23,7 +23,7 @@ export default function ListingView(){
     
     const upload = (e) => {
         e.preventDefault();
-        axios.post('http://localhost:5000/DataUpload' , Data)
+        axios.post('https://backend-portfolio-igy4.onrender.com/DataUpload' , Data)
         .then(res => {})
         .catch(er => console.log(er))
     }
@@ -33,7 +33,7 @@ export default function ListingView(){
         
         const formData = new FormData();
         formData.append('file' , file)
-        axios.post('http://localhost:5000/upload', formData)
+        axios.post('https://backend-portfolio-igy4.onrender.com/upload', formData)
         .then(res => {})
         .catch(er => console.log(er))
 

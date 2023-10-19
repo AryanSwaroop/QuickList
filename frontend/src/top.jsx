@@ -10,7 +10,7 @@ export default function TopBar() {
 
     const [data , setProduct] = useState([]);
     useEffect(() => {
-        axios.get("http://localhost:5000/ProductData")
+        axios.get("https://backend-portfolio-igy4.onrender.com/ProductData")
         .then(Prod => {setProduct(Prod.data);})
         .catch(err => {console.log(err)})
     },[])

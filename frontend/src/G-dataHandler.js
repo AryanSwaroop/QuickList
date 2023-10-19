@@ -7,11 +7,11 @@ export default function dataHandler(){
     
     useEffect(()=>{
       const getUser = () => {
-        fetch("http://localhost:5000/auth/login/success",{
+        fetch("https://backend-portfolio-igy4.onrender.com/auth/login/success",{
           method : "GET",
           credentials: "include",
           headers: {
-            "Access-Control-Allow-Origin" : "http://localhost:5000/",
+            "Access-Control-Allow-Origin" : "https://frontend-portfolio-aryan.vercel.app/",
             Accept:"application/json",
             'Content-Type':"application/json",
             'Access-Control-Allow-Credentials': true
