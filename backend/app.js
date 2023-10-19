@@ -231,4 +231,3 @@ app.listen(process.env.PORT , ()=>{
     console.log("Server Running at port 5000");
 })
 
-export default app;
