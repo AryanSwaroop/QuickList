@@ -7,7 +7,7 @@ export default function dataHandler(){
     
     useEffect(()=>{
       const getUser = () => {
-        fetch("http://localhost:5000/auth/login/success",{
+        fetch("https://backend-portfolio-coral-eight.vercel.app/auth/login/success",{
           method : "GET",
           credentials: "include",
           headers: {
