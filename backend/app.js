@@ -31,7 +31,7 @@ async function main() {
 
 
 
-app.get("https://backend-portfolio-coral-eight.vercel.app",(req,res)=>{
+app.get("https://backend-portfolio-coral-eight.vercel.app/",(req,res)=>{
   res.send("Hello I am up!")
 })
 
@@ -230,6 +230,6 @@ passport.deserializeUser((user,done)=>{
 
 app.use("/auth", authRoute);
 
-app.listen(process.env.PORT,()=>{
+app.listen('https://backend-portfolio-coral-eight.vercel.app/',()=>{
     console.log("Server Running at port 5000");
 })
