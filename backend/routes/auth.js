@@ -27,17 +27,15 @@ router.get("/login/success", (req,res)=>{
 
 router.get("/logout", (req,res)=>{
     req.logout();
-    res.redirect("https://frontend-portfolio-aryan.vercel.app/");
+    res.redirect("http://localhost:"+process.env.PORT);
 });
 
 //router.get("/google/callback", passport.authenticate("google",{}));
 
 router.get("/google/callback", passport.authenticate("google",{
     scope:["profile"],
-    successRedirect:"https://frontend-portfolio-aryan.vercel.app/",
+    successRedirect:"http://localhost:"+process.env.PORT,
     failureRedirect:"/login/failed"
 }));
 
 module.exports = router;
-
-export default app;

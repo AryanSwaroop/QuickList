@@ -7,11 +7,11 @@ export default function dataHandler(){
     
     useEffect(()=>{
       const getUser = () => {
-        fetch("https://backend-portfolio-coral-eight.vercel.app/auth/login/success",{
+        fetch("http://localhost:5000/auth/login/success",{
           method : "GET",
           credentials: "include",
           headers: {
-            "Access-Control-Allow-Origin" : "https://frontend-portfolio-aryan.vercel.app/",
+            "Access-Control-Allow-Origin" : "http://localhost:5000/",
             Accept:"application/json",
             'Content-Type':"application/json",
             'Access-Control-Allow-Credentials': true
