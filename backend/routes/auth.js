@@ -27,14 +27,14 @@ router.get("/login/success", (req,res)=>{
 
 router.get("/logout", (req,res)=>{
     req.logout();
-    res.redirect("http://localhost:"+process.env.PORT);
+    res.redirect("https://localhost:"+process.env.PORT);
 });
 
 //router.get("/google/callback", passport.authenticate("google",{}));
 
 router.get("/google/callback", passport.authenticate("google",{
     scope:["profile"],
-    successRedirect:"http://localhost:"+process.env.PORT,
+    successRedirect:"https://localhost:"+process.env.PORT,
     failureRedirect:"/login/failed"
 }));
 
