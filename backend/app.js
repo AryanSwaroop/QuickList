@@ -227,7 +227,7 @@ passport.deserializeUser((user,done)=>{
 
 app.use("/auth", authRoute);
 
-app.listen(process.env.PORT , ()=>{
-    console.log("Server Running at port 5000");
+app.listen("https://backend-portfolio-igy4.onrender.com" , ()=>{
+    console.log("Server Running at port");
 })
 
