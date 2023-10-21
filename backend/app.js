@@ -73,7 +73,7 @@ app.use(passport.session());
 app.use(cors(
     {
       
-    origin:"https://frontend-portfolio-aryan.vercel.app/",
+    origin:"https://frontend-portfolio-aryan.vercel.app",
     methods :"GET,POST,PUT,DELETE",
     credentials : true
 }));
