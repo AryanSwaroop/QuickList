@@ -7,7 +7,7 @@ export default function dataHandler(){
     
     useEffect(()=>{
       const getUser = () => {
-        fetch("http://backend-portfolio-igy4.onrender.com/auth/login/success",{
+        fetch("https://backend-portfolio-igy4.onrender.com/auth/login/success",{
           method : "GET",
           credentials: "include",
           headers: {
