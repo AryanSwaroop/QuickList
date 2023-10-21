@@ -6,7 +6,7 @@ import dataHandler from './G-dataHandler';
 
 
 const google = ()=>{
-    window.open("http://backend-portfolio-igy4.onrender.com/auth/google/callback","_self")
+    window.open("https://backend-portfolio-igy4.onrender.com/auth/google/callback","_self")
 }
 
 export default function Signup(){
