@@ -180,8 +180,6 @@ passport.use(new GoogleStrategy({
 //saving image file using multer.
 
 
-
-
 app.use(express.urlencoded({ extended : false }));
 
 
@@ -206,13 +204,14 @@ app.post('https://backend-portfolio-igy4.onrender.com/DataUpload', (req,res)=>{
 })
 
 
-app.post('https://backend-portfolio-igy4.onrender.com/upload',upload.single("file"), (req, res) => {
+app.post('/upload',upload.single("file"), (req, res) => {
         console.log(req.file.filename);
         const image = req.file.filename;
         arr.push(image);
 
-
+        
         res.redirect("/");
+        window.open("https://frontend-portfolio-aryan.vercel.app","_self")
 
 })
 
