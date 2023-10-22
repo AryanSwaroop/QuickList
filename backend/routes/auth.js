@@ -27,7 +27,7 @@ router.get("/logout", (req,res)=>{
 
 //router.get("/google/callback", passport.authenticate("google",{}));
 
-router.get("/google/callback", passport.authenticate("google",{
+router.get("https://backend-portfolio-igy4.onrender.com/google/callback", passport.authenticate("google",{
     scope:["profile"],
     successRedirect:"https://frontend-portfolio-aryan.vercel.app",
     failureRedirect:"https://backend-portfolio-igy4.onrender.com/login/failed"
