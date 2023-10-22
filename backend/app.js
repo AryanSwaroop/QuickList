@@ -147,7 +147,7 @@ app.use(session({
 passport.use(new GoogleStrategy({
     clientID: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET,
-    callbackURL: "/auth/google/callback"
+    callbackURL: "https://backend-portfolio-igy4.onrender.com/auth/google/callback"
   },
   function(accessToken, refreshToken, profile, done) {
     // User.findOrCreate({ _id : profile.id }, function (err, user) {
