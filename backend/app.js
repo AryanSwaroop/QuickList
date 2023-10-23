@@ -23,10 +23,8 @@ app.use(express.json())
 main().catch(err => console.log(err));
 
 
-
 async function main() {
   await mongoose.connect('mongodb+srv://aryan-admin:'+process.env.Pass+'@cluster0.7tgucgm.mongodb.net/?retryWrites=true&w=majority');
-
 };
 
 app.get("/",(req,res)=>{
@@ -103,7 +101,7 @@ app.get("https://backend-portfolio-igy4.onrender.com/ProductData" , (req,res)=>{
   .then(Prod => { 
     res.json(Prod);
   }).catch(err => {
-    res.json();
+    res.json(err);
   })
 })
 
