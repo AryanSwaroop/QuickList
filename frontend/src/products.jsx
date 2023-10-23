@@ -18,7 +18,7 @@ export default function Products () {
         return(
             
             <div className="Product_Template" id = {item._id} >
-            <img src={require("https://backend-portfolio-igy4.onrender.com/uploadPhotos/" + item.prodPhotoId)} className="productDisplay" />
+            <img src={"https://backend-portfolio-igy4.onrender.com/uploadPhotos/" + item.prodPhotoId} className="productDisplay" />
             <h4>Type : {item.prodType}</h4>
             <h3>Name : {item.prodName}</h3>
             </div>
