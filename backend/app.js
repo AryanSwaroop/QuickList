@@ -197,8 +197,7 @@ const upload = multer({storage});
 app.post('https://backend-portfolio-igy4.onrender.com/DataUpload', (req,res)=>{
   console.log(req.body);
 
-  SaveProduct(req.body);
-  
+  SaveProduct(req.body);  
 })
 
 
