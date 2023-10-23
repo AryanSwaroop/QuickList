@@ -23,12 +23,8 @@ export default function ListingView(){
     
     const upload = (e) => {
         e.preventDefault();
-        axios.post('https://backend-portfolio-igy4.onrender.com/DataUpload' , Data,{
-            headers: {
-                "Access-Control-Allow-Origin" : "https://frontend-portfolio-aryan.vercel.app",
-                'Access-Control-Allow-Credentials': true
-            }
-        }).then(res => {})
+        axios.post('https://backend-portfolio-igy4.onrender.com/DataUpload' , Data)
+        .then(res => {})
         .catch(er => console.log(er))
     }
     
@@ -37,12 +33,7 @@ export default function ListingView(){
         
         const formData = new FormData();
         formData.append('file' , file)
-        axios.post('https://backend-portfolio-igy4.onrender.com/upload', formData,{
-            headers: {
-                "Access-Control-Allow-Origin" : "https://frontend-portfolio-aryan.vercel.app",
-                'Access-Control-Allow-Credentials': true
-            }
-        })
+        axios.post('https://backend-portfolio-igy4.onrender.com/upload', formData)
         .then(res => {})
         .catch(er => console.log(er))
 
