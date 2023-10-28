@@ -51,7 +51,7 @@ export default function TopBar() {
             <li onClick={hideSidebar}><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 -960 960 960" width="24"><path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/></svg></a></li>
             
             <li><a href="/">Home</a></li>
-            <li><a href="/signup">Signup&nbsp;<i class="fa-solid fa-right-to-bracket" style={{color: "white",height:"2px",width:"2px"}}></i></a></li>
+            <li><a href="/signup">Signup&nbsp;<i class="fa-solid fa-right-to-bracket"></i></a></li>
             <li><a href="sellerpage">Sell&nbsp;<i class="fa-solid fa-check-double"></i></a></li>
           </ul>
           <ul>
