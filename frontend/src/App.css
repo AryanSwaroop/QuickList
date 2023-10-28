@@ -40,6 +40,14 @@
 @media (max-width:1633px) {
   
 
+  
+  .hideOnMobile{
+    display: none;
+  }
+
+  .menu-button{
+    display: block;
+  }
 
   .topBar{
     width: 100%; 
@@ -163,5 +171,12 @@
   
 
   
+  
+}
+
+@media (max-width: 400px) {
+  .sidebar{
+    width: 100%;
+  }
   
 }
