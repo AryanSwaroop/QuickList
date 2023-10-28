@@ -57,7 +57,7 @@ export default function TopBar() {
           <ul>
             <li><a><img src={userPhoto ? userPhoto.photos[0].value : "taijitu.png" } className="profilePicture"/></a></li>
             <li class = "hideOnMobile"><a href="/">Home</a></li>
-            <li class = "hideOnMobile"><a href="/signup">Signup&nbsp;<i class="fa-solid fa-right-to-bracket" style={{color: "white",height:"2px",width:"2px"}}></i></a></li>
+            <li class = "hideOnMobile"><a href="/signup">Signup&nbsp;<i class="fa-solid fa-right-to-bracket"></i></a></li>
             <li class = "hideOnMobile"><a href="sellerpage">Sell&nbsp;<i class="fa-solid fa-check-double"></i></a></li>
            
             
